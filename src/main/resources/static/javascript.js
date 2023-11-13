@@ -32,7 +32,7 @@ function showList() {
       <td>${employees[i].age}</td>
       <td>${employees[i].salary}</td>
       <td onclick="findByDepartment(${employees[i].department.id})">${employees[i].department.name} </td>
-      <td class="btn btn-outline-primary" onclick="deleteE(${employees[i].id})">DELETE</td>
+      <td class="btn btn-outline-primary" onclick="return confirm(deleteE(${employees[i].id}))">DELETE</td>
       <td class="btn btn-outline-secondary" onclick="showFormEdit(${employees[i].id})">EDIT</td>
     </tr>
             `
